@@ -135,3 +135,9 @@ flowchart TD
     C -- изменения --> D[modified (измененный)];
     D -- git add --> B[staged (в списке на коммит) + tracked];
 ~~~
+# Как читать git status
+Большинство файлов в типичном проекте будут находиться в состоянии tracked (то есть закоммичены и не изменены после коммита). Вы не увидите это состояние в выводе команды git status — иначе она бы каждый раз выводила список вообще всех файлов проекта.  
+В итоге git status показывает только следующие состояния файлов:  
+- staged (Changes to be committed в выводе git status);  
+- modified (Changes not staged for commit);  
+- untracked (Untracked files).  
