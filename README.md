@@ -128,14 +128,13 @@ git push -u origin master
 ## Типичный жизненный цикл файла в Git
 Схема ЖЦ файла в Git:
 
-~~~
-mermaid
+~~~mermaid
 graph LR;
-    A[untracked (неотслеживаемый)] -- git add --> B[staged (в списке на коммит) + tracked];
-    B -- git commit --> C[tracked (отслеживаемый)];
-    B -- изменения --> D[modified (измененный)];
-    C -- изменения --> D[modified (измененный)];
-    D -- git add --> B[staged (в списке на коммит) + tracked];
+    A[untracked (неотслеживаемый)] -- "git add" --> B[staged (в списке на коммит) + tracked];
+    B -- "git commit" --> C[tracked (отслеживаемый)];
+    B -- "изменения" --> D[modified (измененный)];
+    C -- "изменения" --> D[modified (измененный)];
+    D -- "git add" --> B[staged (в списке на коммит) + tracked];
 ~~~
 
 # Как читать git status
